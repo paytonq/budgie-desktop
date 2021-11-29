@@ -48,5 +48,11 @@
       <summary>Require a Double-Click Launch New Window</summary>
       <description>Require left clicking twice in quick succession to launch a new window.</description>
     </key>
+
+    <key type="b" name="natural-scrolling">
+      <default>false</default>
+      <summary>Reverse Scroll Direction for Icon Buttons</summary>
+      <description>Reverses the scroll direction for icon buttons.</description>
+    </key>
   </schema>
 </schemalist>

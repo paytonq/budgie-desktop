@@ -38,6 +38,9 @@ public class IconTasklistSettings : Gtk.Grid {
 	[GtkChild]
 	private Gtk.Switch? switch_require_double_click_to_launch_new_instance;
 
+	[GtkChild]
+	private Gtk.Switch? switch_natural_scrolling;
+
 	private Settings? settings;
 
 	public IconTasklistSettings(Settings? settings) {
@@ -49,6 +52,7 @@ public class IconTasklistSettings : Gtk.Grid {
 		settings.bind("show-all-windows-on-click", show_all_on_click, "active", SettingsBindFlags.DEFAULT);
 		settings.bind("middle-click-launch-new-instance", switch_middle_click_create_new_instance, "active", SettingsBindFlags.DEFAULT);
 		settings.bind("require-double-click-to-launch", switch_require_double_click_to_launch_new_instance, "active", SettingsBindFlags.DEFAULT);
+		settings.bind("natural-scrolling", switch_natural_scrolling, "active", SettingsBindFlags.DEFAULT);
 	}
 }
 

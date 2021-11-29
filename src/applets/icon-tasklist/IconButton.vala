@@ -1053,6 +1053,11 @@ public class IconButton : Gtk.ToggleButton {
 
 		bool go_next = (event.direction == Gdk.ScrollDirection.UP);
 
+		bool natural_scrolling = this.settings.get_boolean("natural-scrolling");
+		if (natural_scrolling) {
+			go_next = !go_next;
+		}
+
 		var ids = popover.window_id_to_name.get_keys();
 		var ids_length = ids.length();
 
